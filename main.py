@@ -128,7 +128,7 @@ def send_assigned_user_msg(chat_id, user):
     user_name = user.first_name
     user_id = user.id
     bot.send_message(chat_id=chat_id,
-                     text="[{}](tg://user?id={}), ".format(user_name, user_id) + _("I don't know how to organize social events, could you please, help me?"),
+                     text="[{}](tg://user?id={}), ".format(user_name, user_id) + _("I don't know how to organize cocial events, could you please, help me?"),
                      parse_mode='MarkdownV2')
 
 @bot.message_handler(commands=['2beer'])
