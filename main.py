@@ -95,7 +95,7 @@ def play_dice(chat_id, users):
         user_id = user.id
         user_name = user.first_name
         bot.send_message(chat_id=chat_id,
-                         text="[{}](tg://user?id={}):".format(user_name, user_id),
+                         text="{}:".format(user_name), # я с маркдаун не сталкивался ранее я хз надо ли тут оставлять []
                          parse_mode='MarkdownV2')
         dice = bot.send_dice(chat_id=chat_id, emoji="🎲").dice
 
@@ -128,7 +128,7 @@ def send_assigned_user_msg(chat_id, user):
     user_name = user.first_name
     user_id = user.id
     bot.send_message(chat_id=chat_id,
-                     text="[{}](tg://user?id={}), ".format(user_name, user_id) + _("I don't know how to organize cocial events, could you please, help me?"),
+                     text="[{}](tg://user?id={}), ".format(user_name, user_id) + _("I don't know how to organize social events, could you please, help me?"),
                      parse_mode='MarkdownV2')
 
 @bot.message_handler(commands=['2beer'])
